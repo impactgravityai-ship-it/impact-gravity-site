@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impact Gravity offers premium AI-powered resume writing, LinkedIn optimization, career roadmaps, and portfolio content for global professionals across Asia, North America, and Europe.">
+    <meta name="keywords" content="resume writing, LinkedIn optimization, career roadmap, portfolio writing, ATS resume, career services, AI career services">
+    <title>Impact Gravity | Built to Give You an Edge</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0B1F33 0%, #141C2F 100%);
+            color: #E0E0E0;
+            line-height: 1.6;
+        }
+        .header {
+            background: rgba(11, 31, 51, 0.95);
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(201, 162, 77, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo { width: 50px; height: 50px; }
+        .brand-text h1 {
+            font-size: 1.6em;
+            letter-spacing: 2px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #C9A24D, #F4D47B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .brand-text p {
+            color: #C9A24D;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+        }
+        .contact-header a {
+            color: #C9A24D;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(201, 162, 77, 0.3);
+            padding: 8px 20px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .hero {
+            padding: 100px 40px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8A94A6;
+            margin-bottom: 15px;
+        }
+        .hero h2 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+        .hero .tagline {
+            font-size: 1.4em;
+            color: #C9A24D;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.1em;
+            color: #D0D0D0;
+        }
+        .cta-primary {
+            background: linear-gradient(135deg, #C9A24D, #D4AD5A);
+            color: #0B1F33;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .cta-secondary {
+            border: 2px solid #C9A24D;
+            color: #C9A24D;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .alert-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 40px;
+            border-left: 4px solid #C9A24D;
+            background: rgba(201, 162, 77, 0.08);
+            border-radius: 10px;
+        }
+        .alert-section h3 {
+            color: #C9A24D;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        .container { max-width: 1200px; margin: auto; padding: 80px 40px; }
+        .section-title {
+            text-align: center;
+            font-size: 2.6em;
+            margin-bottom: 15px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #B0B0B0;
+            margin-bottom: 60px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+        .service-card {
+            background: rgba(20, 28, 47, 0.8);
+            border: 1px solid rgba(201, 162, 77, 0.3);
+            border-radius: 14px;
+            padding: 35px;
+        }
+        .service-card h3 {
+            color: #C9A24D;
+            font-size: 1.7em;
+            margin-bottom: 15px;
+        }
+        .service-card ul { list-style: none; margin-top: 20px; }
+        .service-card li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .service-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C9A24D;
+            font-weight: bold;
+        }
+        .footer {
+            background: rgba(11, 31, 51, 0.95);
+            padding: 50px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(201, 162, 77, 0.3);
+        }
+        .footer h3 {
+            color: #C9A24D;
+            margin-bottom: 10px;
+        }
+        .footer p { color: #B0B0B0; }
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2.2em; }
+            .container { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="logo-container">
+        <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="sphereGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#4a7c9e;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#1a3a52;stop-opacity:1" />
+                </linearGradient>
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            <circle cx="100" cy="100" r="90" fill="url(#sphereGradient)" opacity="0.9"/>
+            <ellipse cx="100" cy="100" rx="70" ry="30" fill="none" stroke="#5a8ca6" stroke-width="2" opacity="0.6" transform="rotate(-20 100 100)"/>
+            <ellipse cx="100" cy="100" rx="60" ry="25" fill="none" stroke="#4a7c96" stroke-width="1.5" opacity="0.4" transform="rotate(30 100 100)"/>
+            <line x1="100" y1="30" x2="100" y2="170" stroke="#3a6c86" stroke-width="2" opacity="0.3"/>
+            <line x1="30" y1="100" x2="170" y2="100" stroke="#3a6c86" stroke-width="2" opacity="0.3"/>
+            <circle cx="130" cy="70" r="15" fill="#d4a45a" opacity="0.8" filter="url(#glow)"/>
+            <circle cx="130" cy="70" r="12" fill="#f4d47b" opacity="0.6" filter="url(#glow)"/>
+        </svg>
+        <div class="brand-text">
+            <h1>IMPACT GRAVITY</h1>
+            <p>Built to give you an edge</p>
+        </div>
+    </div>
+    <div class="contact-header">
+        <a href="https://wa.me/919611004176">WhatsApp</a>
+        <a href="mailto:impactgravityai@gmail.com">Email</a>
+    </div>
+</header>
+<section class="hero">
+    <h1>Premium AI-Powered Career Services</h1>
+    <h2>Built for Modern Hiring Systems</h2>
+    <div class="tagline">Human-first. Strategy-led. AI-enhanced.</div>
+    <p>Modern hiring filters before humans do. We design resumes, LinkedIn profiles, and portfolios that communicate clearly, sound authentic, and meet the expectations of recruiters across global markets.</p>
+    <a href="https://wa.me/919611004176" class="cta-primary">Get Started</a>
+    <a href="mailto:impactgravityai@gmail.com" class="cta-secondary">Contact Us</a>
+</section>
+<div class="alert-section">
+    <h3>The 2026 Hiring Reality</h3>
+    <p>Automated screening systems reward clarity, relevance, and structure. Generic AI-generated content often fails to communicate real impact. We help you position your experience in a way that stands up to both systems and humans.</p>
+</div>
+<footer class="footer">
+    <h3>IMPACT GRAVITY</h3>
+    <p>Building your unfair advantage with AI</p>
+    <p style="margin-top: 10px;">Serving professionals across Asia, North America, and Europe</p>
+    <p style="margin-top: 10px;">WhatsApp: +91 96110 04176</p>
+</footer>
+</body>
+</html>
