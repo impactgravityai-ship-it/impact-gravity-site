@@ -3,221 +3,837 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Impact Gravity offers premium AI-powered resume writing, LinkedIn optimization, career roadmaps, and portfolio content for global professionals across Asia, North America, and Europe.">
-    <meta name="keywords" content="resume writing, LinkedIn optimization, career roadmap, portfolio writing, ATS resume, career services, AI career services">
+    <meta name="description" content="Impact Gravity - Elite career services including resume writing, LinkedIn optimization, career roadmaps, and portfolio content. Built to give you an edge in 2026.">
+    <meta name="keywords" content="resume writing, LinkedIn optimization, career roadmap, portfolio writing, ATS resume, career services">
     <title>Impact Gravity | Built to Give You an Edge</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #0B1F33 0%, #141C2F 100%);
-            color: #E0E0E0;
-            line-height: 1.6;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(201, 162, 77, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.15) 0%, transparent 40%);
+            animation: gradientMove 15s ease infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes gradientMove {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
         .header {
-            background: rgba(11, 31, 51, 0.95);
+            background: rgba(11, 15, 35, 0.95);
             padding: 25px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(201, 162, 77, 0.3);
+            border-bottom: 2px solid rgba(201, 162, 77, 0.3);
             position: sticky;
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-        .logo-container { display: flex; align-items: center; gap: 15px; }
-        .logo { width: 50px; height: 50px; }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 55px;
+            height: 55px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+
         .brand-text h1 {
-            font-size: 1.6em;
-            letter-spacing: 2px;
+            color: #ffffff;
+            font-size: 1.7em;
             font-weight: 700;
-            background: linear-gradient(135deg, #C9A24D, #F4D47B);
+            letter-spacing: 2px;
+            margin: 0;
+            background: linear-gradient(135deg, #C9A24D 0%, #f4d47b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+
         .brand-text p {
             color: #C9A24D;
             font-size: 0.85em;
+            margin: 0;
+            font-weight: 500;
             letter-spacing: 1px;
         }
+
+        .contact-header {
+            display: flex;
+            gap: 20px;
+        }
+
         .contact-header a {
             color: #C9A24D;
             text-decoration: none;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
             font-weight: 600;
-            border: 1px solid rgba(201, 162, 77, 0.3);
             padding: 8px 20px;
+            border: 1px solid rgba(201, 162, 77, 0.3);
             border-radius: 5px;
-            margin-left: 10px;
         }
+
+        .contact-header a:hover {
+            background: rgba(201, 162, 77, 0.1);
+            border-color: #C9A24D;
+            transform: translateY(-2px);
+        }
+
         .hero {
             padding: 100px 40px;
             text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
         }
-        .hero h1 {
-            font-size: 1.1em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #8A94A6;
-            margin-bottom: 15px;
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201, 162, 77, 0.2) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            animation: float 8s ease-in-out infinite;
         }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-30px, 30px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
         .hero h2 {
-            font-size: 3em;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #FFFFFF;
-        }
-        .hero .tagline {
-            font-size: 1.4em;
-            color: #C9A24D;
-            font-weight: 600;
+            font-size: 3.2em;
             margin-bottom: 25px;
-        }
-        .hero p {
-            max-width: 800px;
-            margin: 0 auto 40px;
-            font-size: 1.1em;
-            color: #D0D0D0;
-        }
-        .cta-primary {
-            background: linear-gradient(135deg, #C9A24D, #D4AD5A);
-            color: #0B1F33;
-            padding: 16px 40px;
-            border-radius: 50px;
             font-weight: 700;
-            text-decoration: none;
-            margin-right: 15px;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideUp 0.8s ease-out;
         }
-        .cta-secondary {
-            border: 2px solid #C9A24D;
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero .tagline {
+            font-size: 1.5em;
             color: #C9A24D;
-            padding: 16px 40px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
+            margin-bottom: 30px;
+            font-weight: 600;
+            animation: slideUp 0.8s ease-out 0.2s backwards;
         }
+
+        .hero p {
+            font-size: 1.15em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+            animation: slideUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #C9A24D 0%, #d4ad5a 100%);
+            color: #0a0e27;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 10px 30px rgba(201, 162, 77, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(201, 162, 77, 0.5);
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: #C9A24D;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            margin: 10px;
+            border: 2px solid #C9A24D;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(201, 162, 77, 0.1);
+            transform: translateY(-3px);
+        }
+
         .alert-section {
-            max-width: 1100px;
-            margin: 60px auto;
+            background: linear-gradient(135deg, rgba(201, 162, 77, 0.1) 0%, rgba(201, 162, 77, 0.05) 100%);
             padding: 40px;
             border-left: 4px solid #C9A24D;
-            background: rgba(201, 162, 77, 0.08);
+            margin: 60px auto;
+            max-width: 1200px;
             border-radius: 10px;
+            animation: fadeIn 1s ease-out;
         }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         .alert-section h3 {
             color: #C9A24D;
-            font-size: 1.6em;
-            margin-bottom: 10px;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
-        .container { max-width: 1200px; margin: auto; padding: 80px 40px; }
+
+        .alert-section p {
+            color: #e0e0e0;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
         .section-title {
             text-align: center;
-            font-size: 2.6em;
-            margin-bottom: 15px;
+            font-size: 2.8em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
         }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #C9A24D, #d4ad5a);
+            border-radius: 2px;
+        }
+
         .section-subtitle {
             text-align: center;
-            color: #B0B0B0;
+            font-size: 1.2em;
+            color: #b0b0b0;
             margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
         }
+
         .service-card {
-            background: rgba(20, 28, 47, 0.8);
-            border: 1px solid rgba(201, 162, 77, 0.3);
-            border-radius: 14px;
-            padding: 35px;
+            background: rgba(26, 31, 58, 0.6);
+            border: 2px solid rgba(201, 162, 77, 0.2);
+            border-radius: 15px;
+            padding: 40px 30px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
         }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201, 162, 77, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #C9A24D, #8a2be2);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            border-color: #C9A24D;
+            box-shadow: 0 15px 50px rgba(201, 162, 77, 0.3);
+            transform: translateY(-10px);
+        }
+
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
         .service-card h3 {
             color: #C9A24D;
-            font-size: 1.7em;
+            font-size: 1.9em;
             margin-bottom: 15px;
+            font-weight: 700;
         }
-        .service-card ul { list-style: none; margin-top: 20px; }
+
+        .service-card p {
+            color: #b0b0b0;
+            margin-bottom: 25px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin: 25px 0;
+        }
+
         .service-card li {
-            padding-left: 25px;
-            margin-bottom: 10px;
+            padding: 10px 0;
+            padding-left: 30px;
             position: relative;
+            color: #d0d0d0;
+            font-size: 0.98em;
         }
+
         .service-card li::before {
-            content: "✓";
+            content: '✓';
             position: absolute;
             left: 0;
             color: #C9A24D;
             font-weight: bold;
+            font-size: 1.3em;
         }
+
+        .price-box {
+            margin: 30px 0 20px 0;
+            padding: 25px;
+            background: rgba(201, 162, 77, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(201, 162, 77, 0.3);
+        }
+
+        .price {
+            font-size: 2.2em;
+            color: #C9A24D;
+            font-weight: 700;
+        }
+
+        .price small {
+            font-size: 0.5em;
+            color: #666;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+
+        .price-note {
+            font-size: 0.9em;
+            color: #b0b0b0;
+            margin-top: 10px;
+        }
+        
+        .price-india {
+            font-size: 0.9em;
+            color: #8a94a6;
+            margin-top: 8px;
+        }
+
+        .select-service {
+            background: linear-gradient(135deg, #C9A24D 0%, #d4ad5a 100%);
+            color: #0a0e27;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .service-card:hover .select-service {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .premium-section {
+            background: rgba(11, 15, 35, 0.8);
+            color: white;
+            padding: 80px 40px;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .premium-section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
+            bottom: -200px;
+            left: -200px;
+            animation: float 10s ease-in-out infinite;
+        }
+
+        .premium-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .premium-section h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .premium-section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .package-card {
+            background: rgba(26, 31, 58, 0.6);
+            border: 2px solid rgba(201, 162, 77, 0.3);
+            padding: 40px;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .package-card:hover {
+            background: rgba(26, 31, 58, 0.9);
+            border-color: #C9A24D;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(201, 162, 77, 0.3);
+        }
+
+        .package-card h3 {
+            color: #C9A24D;
+            font-size: 1.7em;
+            margin-bottom: 15px;
+        }
+
+        .package-card .package-price {
+            font-size: 2.2em;
+            color: white;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .package-india {
+            font-size: 0.5em;
+            color: #8a94a6;
+            display: block;
+        }
+
+        .testimonials {
+            background: rgba(26, 31, 58, 0.4);
+            padding: 80px 40px;
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background: rgba(26, 31, 58, 0.8);
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 4px solid #C9A24D;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(201, 162, 77, 0.2);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #d0d0d0;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .testimonial-card strong {
+            color: #C9A24D;
+            font-style: normal;
+        }
+
         .footer {
-            background: rgba(11, 31, 51, 0.95);
+            background: rgba(11, 15, 35, 0.95);
+            color: white;
             padding: 50px 40px;
             text-align: center;
-            border-top: 1px solid rgba(201, 162, 77, 0.3);
+            border-top: 2px solid rgba(201, 162, 77, 0.3);
         }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .footer h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
             color: #C9A24D;
-            margin-bottom: 10px;
         }
-        .footer p { color: #B0B0B0; }
+
+        .footer-links {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #C9A24D;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        .footer-links a:hover {
+            background: rgba(201, 162, 77, 0.1);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(201, 162, 77, 0.3);
+            opacity: 0.8;
+        }
+
         @media (max-width: 768px) {
-            .hero h2 { font-size: 2.2em; }
-            .container { padding: 60px 20px; }
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .contact-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h2 {
+                font-size: 2.2em;
+            }
+
+            .hero .tagline {
+                font-size: 1.3em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .container {
+                padding: 60px 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .packages {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
     </style>
 </head>
 <body>
-<header class="header">
-    <div class="logo-container">
-        <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="sphereGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#4a7c9e;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#1a3a52;stop-opacity:1" />
-                </linearGradient>
-                <filter id="glow">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                    <feMerge>
-                        <feMergeNode in="coloredBlur"/>
-                        <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                </filter>
-            </defs>
-            <circle cx="100" cy="100" r="90" fill="url(#sphereGradient)" opacity="0.9"/>
-            <ellipse cx="100" cy="100" rx="70" ry="30" fill="none" stroke="#5a8ca6" stroke-width="2" opacity="0.6" transform="rotate(-20 100 100)"/>
-            <ellipse cx="100" cy="100" rx="60" ry="25" fill="none" stroke="#4a7c96" stroke-width="1.5" opacity="0.4" transform="rotate(30 100 100)"/>
-            <line x1="100" y1="30" x2="100" y2="170" stroke="#3a6c86" stroke-width="2" opacity="0.3"/>
-            <line x1="30" y1="100" x2="170" y2="100" stroke="#3a6c86" stroke-width="2" opacity="0.3"/>
-            <circle cx="130" cy="70" r="15" fill="#d4a45a" opacity="0.8" filter="url(#glow)"/>
-            <circle cx="130" cy="70" r="12" fill="#f4d47b" opacity="0.6" filter="url(#glow)"/>
-        </svg>
-        <div class="brand-text">
-            <h1>IMPACT GRAVITY</h1>
-            <p>Built to give you an edge</p>
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300d4ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300a3cc;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M 60,60 L 90,60 L 90,140 L 60,140 Z' fill='url(%23grad1)'/%3E%3Cpath d='M 110,80 L 140,80 L 140,140 L 110,140 Z M 120,60 L 130,60 L 130,75 L 120,75 Z' fill='url(%23grad1)'/%3E%3Cpath d='M 40,50 Q 30,100 40,150 Q 50,180 80,185 M 160,50 Q 170,100 160,150 Q 150,180 120,185' stroke='url(%23grad1)' stroke-width='4' fill='none'/%3E%3C/svg%3E" alt="Impact Gravity Logo" class="logo">
+            <div class="brand-text">
+                <h1>IMPACT GRAVITY</h1>
+                <p>Built to give you an edge</p>
+            </div>
+        </div>
+        <div class="contact-header">
+            <a href="https://wa.me/919611004176">WhatsApp</a>
+            <a href="mailto:impactgravityai@gmail.com">Email</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>AI Detectors Screen Every Resume</h2>
+            <p class="tagline">Before Recruiters Ever See It</p>
+            <p>While everyone relies on generic AI tools, the top 1% use authentically human content that passes every filter. We combine AI workflows with 100% human-crafted documents that recruiters trust.</p>
+            <a href="https://wa.me/919611004176?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20Impact%20Gravity%20services" class="cta-primary">Get Started</a>
+            <a href="mailto:impactgravityai@gmail.com" class="cta-secondary">Contact Us</a>
+        </div>
+    </section>
+
+    <div class="alert-section">
+        <h3>The 2026 Reality</h3>
+        <p>Generic AI content gets auto-rejected. ATS systems prioritize human-crafted narratives. Most job seekers won't realize this difference until they've missed their window. Don't be one of them.</p>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Elite career services for professionals across all domains—from biotech to finance, engineering to consulting.</p>
+
+        <div class="services-grid">
+            <div class="service-card" onclick="window.location.href='https://wa.me/919611004176?text=Hey%20team%2C%20I%20wanted%20to%20select%20the%20Customised%20Career%20Roadmap%20service'">
+                <h3>Career Roadmap</h3>
+                <p>Curated resources tailored to your goals, timeline, budget, and availability.</p>
+                <ul>
+                    <li>Industry-specific pathway analysis</li>
+                    <li>Personalized skill gap assessment</li>
+                    <li>High-ROI certification recommendations</li>
+                    <li>Curated learning resources with links</li>
+                    <li>2x live 1:1 consultation calls</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price"><small>$199</small> $149</div>
+                    <div class="price-india">₹4,999 for India</div>
+                    <div class="price-note">Entry to Mid-Level</div>
+                </div>
+                <div class="select-service">Select Service →</div>
+            </div>
+
+            <div class="service-card" onclick="window.location.href='https://wa.me/919611004176?text=Hey%20team%2C%20I%20wanted%20to%20select%20the%20Resume%20Writing%20service'">
+                <h3>Resume Writing</h3>
+                <p>ATS-optimized, AI-detector-proof resumes that showcase authentic achievements.</p>
+                <ul>
+                    <li>100% human-crafted content</li>
+                    <li>Guaranteed AI detection pass</li>
+                    <li>Achievement-focused structure</li>
+                    <li>Domain-specific keywords</li>
+                    <li>2 rounds of revisions</li>
+                    <li>1x live 1:1 consultation call</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price"><small>$299</small> $199</div>
+                    <div class="price-india">₹3,499 for India | Executive: ₹5,999</div>
+                    <div class="price-note">Professional Level | Executive: $399</div>
+                </div>
+                <div class="select-service">Select Service →</div>
+            </div>
+
+            <div class="service-card" onclick="window.location.href='https://wa.me/919611004176?text=Hey%20team%2C%20I%20wanted%20to%20select%20the%20LinkedIn%20Optimisation%20service'">
+                <h3>LinkedIn Optimization</h3>
+                <p>Transform your profile into a recruiter magnet with authentic positioning.</p>
+                <ul>
+                    <li>Keyword-rich headline & summary</li>
+                    <li>Complete experience rewrite</li>
+                    <li>Strategic skills optimization</li>
+                    <li>Profile guidance & templates</li>
+                    <li>1x live 1:1 consultation call</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price"><small>$179</small> $129</div>
+                    <div class="price-india">₹2,499 for India</div>
+                    <div class="price-note">All Levels</div>
+                </div>
+                <div class="select-service">Select Service →</div>
+            </div>
+
+            <div class="service-card" onclick="window.location.href='https://wa.me/919611004176?text=Hey%20team%2C%20I%20wanted%20to%20select%20the%20Portfolio%20Content%20Writing%20service'">
+                <h3>Portfolio Content Writing</h3>
+                <p>Compelling website and portfolio content that converts visitors to clients.</p>
+                <ul>
+                    <li>About, services, project descriptions</li>
+                    <li>SEO-optimized content strategy</li>
+                    <li>Brand voice development</li>
+                    <li>Case study writing</li>
+                    <li>1x live consultation call</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price"><small>$399</small> $299</div>
+                    <div class="price-india">₹5,999 for India</div>
+                    <div class="price-note">5-7 Pages | Additional: $50/page</div>
+                </div>
+                <div class="select-service">Select Service →</div>
+            </div>
         </div>
     </div>
-    <div class="contact-header">
-        <a href="https://wa.me/919611004176">WhatsApp</a>
-        <a href="mailto:impactgravityai@gmail.com">Email</a>
-    </div>
-</header>
-<section class="hero">
-    <h1>Premium AI-Powered Career Services</h1>
-    <h2>Built for Modern Hiring Systems</h2>
-    <div class="tagline">Human-first. Strategy-led. AI-enhanced.</div>
-    <p>Modern hiring filters before humans do. We design resumes, LinkedIn profiles, and portfolios that communicate clearly, sound authentic, and meet the expectations of recruiters across global markets.</p>
-    <a href="https://wa.me/919611004176" class="cta-primary">Get Started</a>
-    <a href="mailto:impactgravityai@gmail.com" class="cta-secondary">Contact Us</a>
-</section>
-<div class="alert-section">
-    <h3>The 2026 Hiring Reality</h3>
-    <p>Automated screening systems reward clarity, relevance, and structure. Generic AI-generated content often fails to communicate real impact. We help you position your experience in a way that stands up to both systems and humans.</p>
-</div>
-<footer class="footer">
-    <h3>IMPACT GRAVITY</h3>
-    <p>Building your unfair advantage with AI</p>
-    <p style="margin-top: 10px;">Serving professionals across Asia, North America, and Europe</p>
-    <p style="margin-top: 10px;">WhatsApp: +91 96110 04176</p>
-</footer>
+
+    <section class="premium-section">
+        <div class="premium-content">
+            <h2>Exclusive Packages</h2>
+            <p>Comprehensive solutions that give you an unfair advantage</p>
+
+            <div class="packages">
+                <div class="package-card" onclick="window.location.href='https://wa.me/919611004176?text=Hey%20team%2C%20I%20wanted%20to%20select%20the%20Career%20Launch%20Package'">
+                    <h3>Career Launch</h3>
+                    <p>Resume + LinkedIn Optimization</p>
+                    <div class="package-price">$299<span class="package-india">₹4,999 India</span></div>
+                    <p style="opacity: 0.8;">Save $29 | Perfect for job seekers</p>
+                </div>
+
+                <div class="package-card" onclick="window.location.href='https://wa.me/919611004176?text=Hey%20team%2C%20I%20wanted%20to%20select%20the%20Professional%20Edge%20Package'">
+                    <h3>Professional Edge</h3>
+                    <p>Resume + LinkedIn + Career Roadmap</p>
+                    <div class="package-price">$449<span class="package-india">₹7,999 India</span></div>
+                    <p style="opacity: 0.8;">Save $28 | Most popular</p>
+                </div>
+
+                <div class="package-card" onclick="window.location.href='https://wa.me/919611004176?text=Hey%20team%2C%20I%20wanted%20to%20select%20the%20Executive%20Suite%20Package'">
+                    <h3>Executive Suite</h3>
+                    <p>All Services + Priority Support</p>
+                    <div class="package-price">$799<span class="package-india">₹12,999 India</span></div>
+                    <p style="opacity: 0.8;">Save $76 | C-Suite ready</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Results</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"I was getting auto-rejected everywhere. After my Impact Gravity resume rewrite, I received 3 interview calls within 2 weeks."</p>
+                    <strong>— Priya Sabharwal, Software Engineer (Bangalore)</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Their LinkedIn optimisation helped me get noticed by recruiters at Google and Amazon. The AI-proof positioning is unmatched."</p>
+                    <strong>— Abhishek M., Product Designer (Pune)</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>IMPACT GRAVITY</h3>
+            <p>Building your unfair advantage with AI</p>
+            <div class="footer-links">
+                <a href="https://wa.me/919611004176">WhatsApp: +91 96110 04176</a>
+                <a href="mailto:impactgravityai@gmail.com">impactgravityai@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Impact Gravity. All rights reserved.</p>
+                <p style="margin-top: 10px; font-size: 0.9em;">Serving professionals globally across Asia, North America, and Europe</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
